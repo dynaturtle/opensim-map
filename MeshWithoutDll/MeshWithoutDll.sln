@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "llvolume", "llvolume\llvolume.vcproj", "{0D363605-1620-4EC3-85EE-493EB0E7BAB5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "meshOut", "meshOut\meshOut.vcproj", "{FD8EBB08-1129-4790-BAAA-6C905A70CA3A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0D363605-1620-4EC3-85EE-493EB0E7BAB5} = {0D363605-1620-4EC3-85EE-493EB0E7BAB5}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D363605-1620-4EC3-85EE-493EB0E7BAB5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0D363605-1620-4EC3-85EE-493EB0E7BAB5}.Debug|Win32.Build.0 = Debug|Win32
+		{0D363605-1620-4EC3-85EE-493EB0E7BAB5}.Release|Win32.ActiveCfg = Release|Win32
+		{0D363605-1620-4EC3-85EE-493EB0E7BAB5}.Release|Win32.Build.0 = Release|Win32
+		{FD8EBB08-1129-4790-BAAA-6C905A70CA3A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FD8EBB08-1129-4790-BAAA-6C905A70CA3A}.Debug|Win32.Build.0 = Debug|Win32
+		{FD8EBB08-1129-4790-BAAA-6C905A70CA3A}.Release|Win32.ActiveCfg = Release|Win32
+		{FD8EBB08-1129-4790-BAAA-6C905A70CA3A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
