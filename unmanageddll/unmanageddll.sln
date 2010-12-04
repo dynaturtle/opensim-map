@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unmanageddll", "unmanageddll\unmanageddll.vcproj", "{F303E639-A43C-48EE-8FBE-C92778C3E5D4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unmanageddll_test", "unmanageddll_test\unmanageddll_test.vcproj", "{215B2A32-AB8D-4BF6-B14A-53524AFA6153}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F303E639-A43C-48EE-8FBE-C92778C3E5D4} = {F303E639-A43C-48EE-8FBE-C92778C3E5D4}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F303E639-A43C-48EE-8FBE-C92778C3E5D4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F303E639-A43C-48EE-8FBE-C92778C3E5D4}.Debug|Win32.Build.0 = Debug|Win32
+		{F303E639-A43C-48EE-8FBE-C92778C3E5D4}.Release|Win32.ActiveCfg = Release|Win32
+		{F303E639-A43C-48EE-8FBE-C92778C3E5D4}.Release|Win32.Build.0 = Release|Win32
+		{215B2A32-AB8D-4BF6-B14A-53524AFA6153}.Debug|Win32.ActiveCfg = Debug|Win32
+		{215B2A32-AB8D-4BF6-B14A-53524AFA6153}.Debug|Win32.Build.0 = Debug|Win32
+		{215B2A32-AB8D-4BF6-B14A-53524AFA6153}.Release|Win32.ActiveCfg = Release|Win32
+		{215B2A32-AB8D-4BF6-B14A-53524AFA6153}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
