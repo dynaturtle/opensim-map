@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6E5D043-64E6-4F00-9653-7F87B6FCEF7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenSim.ApplicationPlugins.MapService</RootNamespace>
+    <AssemblyName>OpenSim.ApplicationPlugins.MapService</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Addins, Version=0.4.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Mono.Addins.dll</HintPath>
+    </Reference>
+    <Reference Include="Nini, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Nini.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenMetaverse, Version=0.0.0.41224, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\OpenMetaverse.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenMetaverseTypes, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="OpenSim.Region.Physics.Meshing, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="XMLRPC, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\XMLRPC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentInfo.cs" />
+    <Compile Include="LayerParams.cs" />
+    <Compile Include="layers\AgentLayer.cs" />
+    <Compile Include="layers\BaseLayer.cs" />
+    <Compile Include="BBOX.cs" />
+    <Compile Include="BBOXF.cs" />
+    <Compile Include="CRS.cs" />
+    <Compile Include="ImageToolBox.cs" />
+    <Compile Include="Matrix.cs" />
+    <Compile Include="layers\ObjectLayer.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="Polygon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MapService.cs" />
+    <Compile Include="layers\TerrainLayer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\OpenSim.Framework.csproj">
+      <Project>{8ACA2445-0000-0000-0000-000000000000}</Project>
+      <Name>OpenSim.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Servers\HttpServer\OpenSim.Framework.Servers.HttpServer.csproj">
+      <Project>{FF1C6034-0000-0000-0000-000000000000}</Project>
+      <Name>OpenSim.Framework.Servers.HttpServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Servers\OpenSim.Framework.Servers.csproj">
+      <Project>{2CC71860-0000-0000-0000-000000000000}</Project>
+      <Name>OpenSim.Framework.Servers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Region\Application\OpenSim.csproj">
+      <Project>{438A9556-0000-0000-0000-000000000000}</Project>
+      <Name>OpenSim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Region\ClientStack\OpenSim.Region.ClientStack.csproj">
+      <Project>{DC3698B2-0000-0000-0000-000000000000}</Project>
+      <Name>OpenSim.Region.ClientStack</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Region\CoreModules\OpenSim.Region.CoreModules.csproj">
+      <Project>{234D256A-0000-0000-0000-000000000000}</Project>
+      <Name>OpenSim.Region.CoreModules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Region\Framework\OpenSim.Region.Framework.csproj">
+      <Project>{C8DACD29-0000-0000-0000-000000000000}</Project>
+      <Name>OpenSim.Region.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MapService.addin.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Capability.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
